@@ -10,18 +10,26 @@ $bp2: 668px;
     margin: 0 -75%;
 }
 
-.bg_dotted {
-	background-image: url('../img/points.svg');
+.backgroud {
+    margin-top: -80px;
 }
 
-.bg_orange {
-	background-color: orange;
+.figcap_homme {
+    color: white;
+    position: relative;
+    top: 30em;
+    background-color: rgba(255,255,255,0.2);
 }
 
-.bg_vert {
-	background-color: green;
+.promo {
+    color: white;
+    background-color: red;
+    position: relative;
+    top: 20em;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
 }
-
 
 @media screen and (min-width: $bp1){
 	.inner {
@@ -36,18 +44,71 @@ $bp2: 668px;
 	}
 }
 
-
 .logo_and_rdv {
 	display: flex;
-	flex-direction: column;
+    flex-direction: row;
 	margin-bottom: 1rem;
 }
 
+.logo_texte, .button_rdv {
+    width: 100%;
+}
+
+.div_logo_texte, .div_lien_rdv {
+    width: 50%;
+}
+
+.img_experience {
+    width: 100%;
+}
+
+.experience {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.cryolyse{
+    order: 2;
+}
+
 @media screen and (min-width: $bp1){
-	.photo_texte {
-		flex-direction: row;
-	}
-	.texte {
-		padding-left: 1rem;
-	}
+    
+    .experiences {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+    
+    .backgroud_homme {
+        width: 180%;
+        margin: 0 -50%;
+    }
+
+    .experience {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .cryolyse{
+        order: 0;
+    } 
+
+}
+
+@media screen and (min-width: $bp2){
+    
+    .backgroud_homme {
+        width: 150%;
+        margin: 0 -50%;
+    }
+    
+    .figcap_homme {
+        top: 35em;
+    }
+       
+    .experience {
+        width: 30%;
+        margin: 0 auto;
+    }
+    
 }

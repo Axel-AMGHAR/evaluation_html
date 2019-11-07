@@ -1,59 +1,51 @@
+$color: #00465b;
+$azur: azure;
+
 @import 'reset';
 @import 'menu';
 @import 'layout';
 
-$color : #00465b;
-.a_cacher {
-	display: none;
+@font-face {
+font-family: 'Bernina';
+src: url('fonts/BerninaSans-Web-CondensedBold.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
 }
 
-.Icon {
-  /* Permet de redimensionner en changeant la font-size de l’icône */
-  /* Bel alignement visuel des icônes avec le texte */
-  vertical-align: -0.15em;
-  /* fill par défaut = valeur de la propriété couleur de son élément parent */
-  fill: currentColor;
-  /* Les paths et les strokes qui dépassent de la viewBox peuvent apparaître dans IE.
-	 Si vous utilisez normalize.css, inutile de l’ajouter. */
-  overflow: hidden;
+$font: 'Bernina';
+    
+body {
+    color: $color;
+    text-align: center;
+    background-color: $azur;
 }
 
-.textcenter {
-	text-align: center;
-}
-
-.figcap_homme {
-    color: white;
-    position: relative;
-    top: 35em;
-    background-color: rgba(255,255,255,0.2);
-}
-
-.promo {
-    color: white;
-    background-color: red;
-    position: relative;
-    top: 20em;
-    border-radius: 10px;
-    width: 50%;
-    margin: auto;
+.titre_ice, .experiences {
+    font-family: $font;
 }
 
 .button_rdv {
     border: solid $color 2px;
     border-radius: 10px;
-    background-color: white;
+    background-color: $azur;
+    padding: 10px;
+    font-size: 150%;
 }
 
-.backgroud {
-    margin-top: -19%;
-}
-.mbm {
-	margin-bottom: 1rem;
+.img_experience {
+    border-radius: 100%;
 }
 
-@media screen and (min-width: $bp1){
-	 header {
-		 height: 400px;
-	 }
+.libelle_cryo {
+    margin: 4% 0;
+}
+
+.titre_ice {
+    text-align: start;
+}
+
+@media screen and (min-width: $bp2){
+    .titre_ice {
+        text-align: end;
+    }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -373,16 +372,25 @@ template {
   margin: 0 -75%;
 }
 
-.bg_dotted {
-  background-image: url("../img/points.svg");
+.backgroud {
+  margin-top: -80px;
 }
 
-.bg_orange {
-  background-color: orange;
+.figcap_homme {
+  color: white;
+  position: relative;
+  top: 30em;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.bg_vert {
-  background-color: green;
+.promo {
+  color: white;
+  background-color: red;
+  position: relative;
+  top: 20em;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
 }
 
 @media screen and (min-width: 466px) {
@@ -401,74 +409,111 @@ template {
 .logo_and_rdv {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -ms-flex-direction: row;
+      flex-direction: row;
   margin-bottom: 1rem;
 }
 
+.logo_texte, .button_rdv {
+  width: 100%;
+}
+
+.div_logo_texte, .div_lien_rdv {
+  width: 50%;
+}
+
+.img_experience {
+  width: 100%;
+}
+
+.experience {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.cryolyse {
+  -ms-flex-order: 2;
+      order: 2;
+}
+
 @media screen and (min-width: 466px) {
-  .photo_texte {
+  .experiences {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -ms-flex-direction: row;
         flex-direction: row;
+    margin-bottom: 1rem;
   }
-  .texte {
-    padding-left: 1rem;
+  .backgroud_homme {
+    width: 180%;
+    margin: 0 -50%;
+  }
+  .experience {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .cryolyse {
+    -ms-flex-order: 0;
+        order: 0;
   }
 }
 
-.a_cacher {
-  display: none;
+@media screen and (min-width: 668px) {
+  .backgroud_homme {
+    width: 150%;
+    margin: 0 -50%;
+  }
+  .figcap_homme {
+    top: 35em;
+  }
+  .experience {
+    width: 30%;
+    margin: 0 auto;
+  }
 }
 
-.Icon {
-  /* Permet de redimensionner en changeant la font-size de l’icône */
-  /* Bel alignement visuel des icônes avec le texte */
-  vertical-align: -0.15em;
-  /* fill par défaut = valeur de la propriété couleur de son élément parent */
-  fill: currentColor;
-  /* Les paths et les strokes qui dépassent de la viewBox peuvent apparaître dans IE.
-	 Si vous utilisez normalize.css, inutile de l’ajouter. */
-  overflow: hidden;
+@font-face {
+  font-family: 'Bernina';
+  src: url("fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.textcenter {
+body {
+  color: #00465b;
   text-align: center;
+  background-color: azure;
 }
 
-.figcap_homme {
-  color: white;
-  position: relative;
-  top: 35em;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.promo {
-  color: white;
-  background-color: red;
-  position: relative;
-  top: 20em;
-  border-radius: 10px;
-  width: 50%;
-  margin: auto;
+.titre_ice, .experiences {
+  font-family: "Bernina";
 }
 
 .button_rdv {
   border: solid #00465b 2px;
   border-radius: 10px;
-  background-color: white;
+  background-color: azure;
+  padding: 10px;
+  font-size: 150%;
 }
 
-.backgroud {
-  margin-top: -19%;
+.img_experience {
+  border-radius: 100%;
 }
 
-.mbm {
-  margin-bottom: 1rem;
+.libelle_cryo {
+  margin: 4% 0;
 }
 
-@media screen and (min-width: 466px) {
-  header {
-    height: 400px;
+.titre_ice {
+  text-align: start;
+}
+
+@media screen and (min-width: 668px) {
+  .titre_ice {
+    text-align: end;
   }
 }
 
