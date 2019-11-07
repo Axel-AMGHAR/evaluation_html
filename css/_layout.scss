@@ -1,0 +1,53 @@
+$bp1: 466px;
+$bp2: 668px;
+
+.inner {
+	width: 100%
+}
+
+.backgroud_homme {
+    width: 250%;
+    margin: 0 -75%;
+}
+
+.bg_dotted {
+	background-image: url('../img/points.svg');
+}
+
+.bg_orange {
+	background-color: orange;
+}
+
+.bg_vert {
+	background-color: green;
+}
+
+
+@media screen and (min-width: $bp1){
+	.inner {
+		width: $bp1;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: $bp2){
+	.inner {
+		width: $bp2;
+	}
+}
+
+
+.logo_and_rdv {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+}
+
+@media screen and (min-width: $bp1){
+	.photo_texte {
+		flex-direction: row;
+	}
+	.texte {
+		padding-left: 1rem;
+	}
+}
