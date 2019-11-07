@@ -1,10 +1,6 @@
 $color: #00465b;
 $azur: azure;
 
-@import 'reset';
-@import 'menu';
-@import 'layout';
-
 @font-face {
 font-family: 'Bernina';
 src: url('fonts/BerninaSans-Web-CondensedBold.woff2') format('woff2');
@@ -13,11 +9,24 @@ font-style: normal;
 }
 
 $font: 'Bernina';
-    
+
+$white: white;
+$brown_red: #a52a2a;
+$red_darker: darken($brown_red, 10%);
+$white_light: rgba( $white, .2);
+
+@import 'reset';
+@import 'menu';
+@import 'layout';
+
 body {
     color: $color;
     text-align: center;
     background-color: $azur;
+}
+
+.figcap_homme {
+    font-size: 150%;
 }
 
 .titre_ice, .experiences {

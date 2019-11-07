@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bernina';
+  src: url("fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -333,64 +340,38 @@ template {
   display: none !important;
 }
 
-.barrnav ul {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  background-color: #B4D143;
-}
-
-.barrnav img.hamb {
-  width: 50px;
-  height: 50px;
-}
-
-.barrnav li {
-  list-style-type: none;
-}
-
-.barrnav li:hover {
-  background-color: #768c22;
-}
-
-@media screen and (min-width: 768px) {
-  .barrnav ul {
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 .inner {
   width: 100%;
 }
 
 .backgroud_homme {
   width: 250%;
-  margin: 0 -75%;
+  margin: 0 0 0 -75%;
 }
 
 .backgroud {
-  margin-top: -80px;
+  position: relative;
 }
 
 .figcap_homme {
+  text-align: start;
+  width: 100%;
   color: white;
-  position: relative;
-  top: 30em;
+  position: absolute;
+  bottom: 20px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .promo {
   color: white;
-  background-color: red;
-  position: relative;
-  top: 20em;
+  background-color: #7c2020;
+  position: absolute;
+  top: 10em;
+  right: 2em;
   border-radius: 10px;
-  width: 50%;
-  margin: auto;
+  width: 30%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 @media screen and (min-width: 466px) {
@@ -400,9 +381,9 @@ template {
   }
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 768px) {
   .inner {
-    width: 668px;
+    width: 768px;
   }
 }
 
@@ -431,20 +412,35 @@ template {
   margin: 0 auto;
 }
 
-.cryolyse {
+.experiences {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.cryotherapie {
+  -ms-flex-order: 1;
+      order: 1;
+}
+
+.cryoplyse {
   -ms-flex-order: 2;
       order: 2;
 }
 
+.autre_soin {
+  -ms-flex-order: 3;
+      order: 3;
+}
+
 @media screen and (min-width: 466px) {
   .experiences {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -ms-flex-direction: row;
         flex-direction: row;
-    margin-bottom: 1rem;
   }
   .backgroud_homme {
     width: 180%;
@@ -454,19 +450,24 @@ template {
     width: 40%;
     margin: 0 auto;
   }
-  .cryolyse {
-    -ms-flex-order: 0;
-        order: 0;
+  .cryotherapie {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .cryoplyse {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .autre_soin {
+    -ms-flex-order: 1;
+        order: 1;
   }
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 768px) {
   .backgroud_homme {
     width: 150%;
     margin: 0 -50%;
-  }
-  .figcap_homme {
-    top: 35em;
   }
   .experience {
     width: 30%;
@@ -474,17 +475,14 @@ template {
   }
 }
 
-@font-face {
-  font-family: 'Bernina';
-  src: url("fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   color: #00465b;
   text-align: center;
   background-color: azure;
+}
+
+.figcap_homme {
+  font-size: 150%;
 }
 
 .titre_ice, .experiences {
@@ -511,7 +509,7 @@ body {
   text-align: start;
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 768px) {
   .titre_ice {
     text-align: end;
   }

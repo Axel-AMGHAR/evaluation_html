@@ -1,5 +1,5 @@
 $bp1: 466px;
-$bp2: 668px;
+$bp2: 768px;
 
 .inner {
 	width: 100%
@@ -7,28 +7,31 @@ $bp2: 668px;
 
 .backgroud_homme {
     width: 250%;
-    margin: 0 -75%;
+    margin: 0 0 0 -75%;
 }
 
 .backgroud {
-    margin-top: -80px;
+    position: relative;
 }
 
 .figcap_homme {
+    text-align: start;
+    width: 100%;
     color: white;
-    position: relative;
-    top: 30em;
-    background-color: rgba(255,255,255,0.2);
+    position: absolute;
+    bottom: 20px;
+    background-color: $white_light;
 }
 
 .promo {
     color: white;
-    background-color: red;
-    position: relative;
-    top: 20em;
+    background-color: $red_darker;
+    position: absolute;
+    top: 10em;
+    right: 2em;
     border-radius: 10px;
-    width: 50%;
-    margin: auto;
+    width: 30%;
+    transform: rotate(30deg)
 }
 
 @media screen and (min-width: $bp1){
@@ -67,17 +70,29 @@ $bp2: 668px;
     margin: 0 auto;
 }
 
-.cryolyse{
+.experiences {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.cryotherapie{
+    order: 1;
+}
+
+.cryoplyse{
     order: 2;
+}
+
+.autre_soin{
+    order: 3;
 }
 
 @media screen and (min-width: $bp1){
     
     .experiences {
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: 1rem;
     }
     
     .backgroud_homme {
@@ -89,9 +104,18 @@ $bp2: 668px;
         width: 40%;
         margin: 0 auto;
     }
-    .cryolyse{
-        order: 0;
-    } 
+
+    .cryotherapie{
+        order: 2;
+    }
+
+    .cryoplyse{
+        order: 3;
+    }
+
+    .autre_soin{
+        order: 1;
+    }
 
 }
 
@@ -100,10 +124,6 @@ $bp2: 668px;
     .backgroud_homme {
         width: 150%;
         margin: 0 -50%;
-    }
-    
-    .figcap_homme {
-        top: 35em;
     }
        
     .experience {
