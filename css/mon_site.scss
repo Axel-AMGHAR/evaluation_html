@@ -32,6 +32,13 @@ body {
     font-family: $font_principale;
 }
 
+.backgroud {
+    background-image: url(../background.jpg);
+    background-position: top 0 right 50%;
+    background-size: cover;
+    height: 400px;
+}
+
 .figcap_homme {
     font-size: 150%;
     padding-left: 2%;
@@ -77,8 +84,18 @@ body {
     width: 100%;
 }
 
+@media screen and (min-width: $bp1){
+    .backgroud {
+        height: 600px;
+    }   
+}
+
 @media screen and (min-width: $bp2){
     .titre_ice {
         text-align: end;
+    }
+    
+    .backgroud {
+        height: 700px;
     }
 }
