@@ -2,13 +2,19 @@ $color: #00465b;
 $azur: azure;
 
 @font-face {
-font-family: 'Bernina';
-src: url('fonts/BerninaSans-Web-CondensedBold.woff2') format('woff2');
-font-weight: normal;
-font-style: normal;
+    font-family: 'Bernina';
+    src: url('../fonts/BerninaSans-Web-CondensedBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
-$font: 'Bernina';
+@font-face {
+    font-family: "GothamHTF";
+    src: url('../fonts/GothamHTF-Book.ttf') format('truetype');
+}
+
+
+$font_principale: Bernina;
 
 $white: white;
 $brown_red: #a52a2a;
@@ -23,14 +29,28 @@ body {
     color: $color;
     text-align: center;
     background-color: $azur;
+    font-family: $font_principale;
 }
 
 .figcap_homme {
     font-size: 150%;
+    padding-left: 2%;
+    background-color: $white_light;
+    text-align: start;
+    width: 100%;
+    color: white;
+}
+
+.figcap_homme #fig_caracteritiques{
+    font-size: 60%;
 }
 
 .titre_ice, .experiences {
-    font-family: $font;
+    font-family: "GothamHTF";
+}
+
+.titre_ice span {
+    letter-spacing: .2rem;
 }
 
 .button_rdv {
@@ -51,6 +71,10 @@ body {
 
 .titre_ice {
     text-align: start;
+}
+
+.backgroud_homme {
+    width: 100%;
 }
 
 @media screen and (min-width: $bp2){

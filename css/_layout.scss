@@ -5,32 +5,27 @@ $bp2: 768px;
 	width: 100%
 }
 
-.backgroud_homme {
-    width: 250%;
-    margin: 0 0 0 -75%;
-}
-
 .backgroud {
     position: relative;
 }
 
 .figcap_homme {
-    text-align: start;
-    width: 100%;
-    color: white;
     position: absolute;
     bottom: 20px;
-    background-color: $white_light;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .promo {
     color: white;
     background-color: $red_darker;
     position: absolute;
-    top: 10em;
+    top: 4em;
     right: 2em;
     border-radius: 10px;
-    width: 30%;
+    width: 200px;
+    padding: 0.5rem;
     transform: rotate(30deg)
 }
 
@@ -45,6 +40,11 @@ $bp2: 768px;
 	.inner {
 		width: $bp2;
 	}
+    
+    .figcap_homme {
+        flex-direction: row;
+        align-items: flex-end;
+    }
 }
 
 .logo_and_rdv {
@@ -94,11 +94,6 @@ $bp2: 768px;
     .experiences {
         flex-direction: row;
     }
-    
-    .backgroud_homme {
-        width: 180%;
-        margin: 0 -50%;
-    }
 
     .experience {
         width: 40%;
@@ -116,19 +111,20 @@ $bp2: 768px;
     .autre_soin{
         order: 1;
     }
+    
+    .logo_and_rdv {
+        justify-content: space-between;
+   }
 
+    .div_logo_texte, .div_lien_rdv {
+        width: 150px;
+    }
 }
 
 @media screen and (min-width: $bp2){
-    
-    .backgroud_homme {
-        width: 150%;
-        margin: 0 -50%;
-    }
        
     .experience {
         width: 30%;
         margin: 0 auto;
     }
-    
 }

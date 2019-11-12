@@ -1,8 +1,13 @@
 @font-face {
   font-family: 'Bernina';
-  src: url("fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
+  src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamHTF";
+  src: url("../fonts/GothamHTF-Book.ttf") format("truetype");
 }
 
 *,
@@ -344,32 +349,30 @@ template {
   width: 100%;
 }
 
-.backgroud_homme {
-  width: 250%;
-  margin: 0 0 0 -75%;
-}
-
 .backgroud {
   position: relative;
 }
 
 .figcap_homme {
-  text-align: start;
-  width: 100%;
-  color: white;
   position: absolute;
   bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .promo {
   color: white;
   background-color: #7c2020;
   position: absolute;
-  top: 10em;
+  top: 4em;
   right: 2em;
   border-radius: 10px;
-  width: 30%;
+  width: 200px;
+  padding: 0.5rem;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
@@ -384,6 +387,12 @@ template {
 @media screen and (min-width: 768px) {
   .inner {
     width: 768px;
+  }
+  .figcap_homme {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: end;
+        align-items: flex-end;
   }
 }
 
@@ -442,10 +451,6 @@ template {
     -ms-flex-direction: row;
         flex-direction: row;
   }
-  .backgroud_homme {
-    width: 180%;
-    margin: 0 -50%;
-  }
   .experience {
     width: 40%;
     margin: 0 auto;
@@ -462,13 +467,16 @@ template {
     -ms-flex-order: 1;
         order: 1;
   }
+  .logo_and_rdv {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .div_logo_texte, .div_lien_rdv {
+    width: 150px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .backgroud_homme {
-    width: 150%;
-    margin: 0 -50%;
-  }
   .experience {
     width: 30%;
     margin: 0 auto;
@@ -479,14 +487,28 @@ body {
   color: #00465b;
   text-align: center;
   background-color: azure;
+  font-family: Bernina;
 }
 
 .figcap_homme {
   font-size: 150%;
+  padding-left: 2%;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: start;
+  width: 100%;
+  color: white;
+}
+
+.figcap_homme #fig_caracteritiques {
+  font-size: 60%;
 }
 
 .titre_ice, .experiences {
-  font-family: "Bernina";
+  font-family: "GothamHTF";
+}
+
+.titre_ice span {
+  letter-spacing: .2rem;
 }
 
 .button_rdv {
@@ -507,6 +529,10 @@ body {
 
 .titre_ice {
   text-align: start;
+}
+
+.backgroud_homme {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
